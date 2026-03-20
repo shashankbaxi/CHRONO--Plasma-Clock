@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHRONO — Plasma Clock</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- Living background -->
+  <canvas id="plasma-canvas"></canvas>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- Floating orbs for depth -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Main scene -->
+  <main class="scene">
+
+    <!-- Title -->
+    <div class="title-row">
+      <span class="title-line"></span>
+      <h1 class="title">C H R O N O</h1>
+      <span class="title-line"></span>
+    </div>
+
+    <!-- Clock container -->
+    <div class="clock-shell">
+      <div class="clock-glow-ring"></div>
+
+      <div class="clock-face">
+
+        <!-- Hours -->
+        <div class="segment-group" id="hours-group">
+          <div class="digit-slot" id="h1">
+            <div class="digit-inner">
+              <div class="digit-prev"></div>
+              <div class="digit-curr"></div>
+            </div>
+            <div class="digit-reflection"></div>
+          </div>
+          <div class="digit-slot" id="h2">
+            <div class="digit-inner">
+              <div class="digit-prev"></div>
+              <div class="digit-curr"></div>
+            </div>
+            <div class="digit-reflection"></div>
+          </div>
+        </div>
+
+        <!-- Colon 1 -->
+        <div class="colon" id="colon1">
+          <div class="colon-dot top"></div>
+          <div class="colon-dot bot"></div>
+        </div>
+
+        <!-- Minutes -->
+        <div class="segment-group" id="minutes-group">
+          <div class="digit-slot" id="m1">
+            <div class="digit-inner">
+              <div class="digit-prev"></div>
+              <div class="digit-curr"></div>
+            </div>
+            <div class="digit-reflection"></div>
+          </div>
+          <div class="digit-slot" id="m2">
+            <div class="digit-inner">
+              <div class="digit-prev"></div>
+              <div class="digit-curr"></div>
+            </div>
+            <div class="digit-reflection"></div>
+          </div>
+        </div>
+
+        <!-- Colon 2 -->
+        <div class="colon" id="colon2">
+          <div class="colon-dot top"></div>
+          <div class="colon-dot bot"></div>
+        </div>
+
+        <!-- Seconds -->
+        <div class="segment-group" id="seconds-group">
+          <div class="digit-slot" id="s1">
+            <div class="digit-inner">
+              <div class="digit-prev"></div>
+              <div class="digit-curr"></div>
+            </div>
+            <div class="digit-reflection"></div>
+          </div>
+          <div class="digit-slot" id="s2">
+            <div class="digit-inner">
+              <div class="digit-prev"></div>
+              <div class="digit-curr"></div>
+            </div>
+            <div class="digit-reflection"></div>
+          </div>
+        </div>
+
+      </div><!-- /.clock-face -->
+
+      <!-- Progress arc for seconds -->
+      <svg class="seconds-arc" viewBox="0 0 400 40" preserveAspectRatio="none">
+        <line x1="0" y1="20" x2="400" y2="20" class="arc-track"/>
+        <line x1="0" y1="20" x2="400" y2="20" class="arc-fill" id="seconds-progress"/>
+      </svg>
+
+    </div><!-- /.clock-shell -->
+
+    <!-- Date + info bar -->
+    <div class="info-bar">
+      <div class="info-item" id="date-display"></div>
+      <div class="info-divider"></div>
+      <div class="info-item" id="tz-display"></div>
+      <div class="info-divider"></div>
+      <div class="info-item" id="ampm-display"></div>
+    </div>
+
+    <!-- Pulse rings -->
+    <div class="pulse-ring r1"></div>
+    <div class="pulse-ring r2"></div>
+    <div class="pulse-ring r3"></div>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
