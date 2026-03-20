@@ -8,6 +8,12 @@
 
 ---
 
+## 📸 Preview
+
+![CHRONO Plasma Clock Screenshot](preview.png)
+
+---
+
 ## ✨ Features
 
 ### 🌊 Living Plasma Background
@@ -158,5 +164,5 @@ MIT License — free to use, modify, and distribute for personal and commercial 
 ---
 
 <div align="center">
-  <strong>Made with ❤️ and lots of ☕ by Shashank Baxi</strong>
+  <strong>Made with ⚡ and neon by a human who thinks clocks should feel alive</strong>
 </div>
